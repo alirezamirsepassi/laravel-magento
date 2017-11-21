@@ -73,7 +73,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	 */
 	public function registerMagento()
 	{
-		$this->app['magento'] = $this->app->share(function($app)
+		$this->app['magento'] = $this->app->singleton(function($app)
 	    {
 	        return new Magento($app['config']);
 	    });
@@ -86,7 +86,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	 */
 	public function registerSoapClient()
 	{
-		$this->app['magento_soap_client'] = $this->app->share(function($app)
+		$this->app['magento_soap_client'] = $this->app->singleton(function($app)
 	    {
 	        return new Connections\MagentoSoapClient;
 	    });
@@ -105,7 +105,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	 */
 	public function registerSoapStorage()
 	{
-		$this->app['magento_soap_storage'] = $this->app->share(function($app)
+		$this->app['magento_soap_storage'] = $this->app->singleton(function($app)
 	    {
 	        return new Connections\MagentoSoapStorage;
 	    });
