@@ -74,20 +74,6 @@ class MagentoSoapStorage {
 	}
 
 	/**
-	 *	Remove Connection
-	 *
-	 *	@return AlirezaMirsepassi\Magento\Connections\MagentoSoapClient
-	 */
-	public function remove($connection)
-	{
-		if ( array_key_exists(key($connection), $this->services) ) {
-			unset($this->services[key($connection)]);
-			\Cache::forever('magento_soap_services', $this->services);
-		}
-		return $connection;
-	}
-
-	/**
 	 *	Serve available connections
 	 *
 	 *	@return array
