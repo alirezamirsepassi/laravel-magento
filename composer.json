@@ -1,0 +1,32 @@
+{
+    "name": "alirezamirsepassi/magento",
+    "description": "A simple Magento Integration using SOAP v1 and v2",
+    "version": "2.0.0",
+    "keywords": ["laravel", "magento", "soap"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alireza Mirsepassi",
+            "email": "alirezamirsepassi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/contracts": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/AlirezaMirsepassi/Magento/Connections/Exceptions.php",
+            "src/AlirezaMirsepassi/Magento/Objects/Exceptions.php"
+        ],
+        "psr-0": {
+            "AlirezaMirsepassi\\Magento\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
